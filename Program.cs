@@ -1,9 +1,6 @@
-﻿using HackerEarth.BasicInputOutput;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace HackerEarth
 {
@@ -11,7 +8,15 @@ namespace HackerEarth
     {
         static void Main(string[] args)
         {
-            (new Solver()).PrintPrimeNumbers();
+            int n = 1;
+            while (n != 42)
+            {
+                n = int.Parse(Console.ReadLine());
+                if (n != 42)
+                {
+                    Console.WriteLine(n);
+                }
+            }
         }
     }
 }
