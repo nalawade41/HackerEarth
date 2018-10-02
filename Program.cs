@@ -8,15 +8,10 @@ namespace HackerEarth
     {
         static void Main(string[] args)
         {
-            int n = 1;
-            while (n != 42)
-            {
-                n = int.Parse(Console.ReadLine());
-                if (n != 42)
-                {
-                    Console.WriteLine(n);
-                }
-            }
+            int num = int.Parse(Console.ReadLine());
+            int[] array = new int[num];
+            array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
         }
     }
 }

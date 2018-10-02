@@ -241,6 +241,33 @@ namespace HackerEarth.BasicInputOutput
             }
         }
 
+        public void Cipher()
+        {
+            string message = Console.ReadLine();
+            int num = int.Parse(Console.ReadLine());
+            string encryptedMessage = string.Empty;
+            foreach (char c in message)
+            {
+                int k = (int)c;
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+                {
+                    int j = 0;
+                    while (j < num)
+                    {
+                        j++;
+                        k++;
+                        if (k == 58)
+                            k = 48;
+                        if (k == 91)
+                            k = 65;
+                        if (k == 123)
+                            k = 97;
+                    }
+                }
+                encryptedMessage += (char)k;
+            }
+            Console.WriteLine(encryptedMessage);
+        }
         #region Helper functions
         private bool isPrimeOrNot(int n)
         {
