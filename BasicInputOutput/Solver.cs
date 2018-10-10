@@ -268,6 +268,40 @@ namespace HackerEarth.BasicInputOutput
             }
             Console.WriteLine(encryptedMessage);
         }
+
+        public void AmanAndMrSharma()
+        {
+            int num = int.Parse(Console.ReadLine());
+            int[] array = new int[2];
+            int count = 0;
+            for (int i = 0; i < num; i++)
+            {
+                array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+                if ((44 * array[0]) / 7 <= 100 * array[1])
+                    count++;
+            }
+            Console.WriteLine(count);
+        }
+
+        public void PlayWithNumbers()
+        {
+            int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            int[] array = new int[num[0]];
+            array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            long[] preSum = new long[num[0] + 1];
+            for (int i = 0; i < num[0]; i++)
+            {
+                preSum[i + 1] = preSum[i] + array[i];
+            }
+            for (int i = 0; i < num[1]; i++)
+            {
+                int[] queryArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+                long sum = (preSum[queryArray[1]] - preSum[queryArray[0] - 1]);
+                Console.WriteLine(Math.Floor((double)sum / ((queryArray[1] + 1) - queryArray[0])));
+            }
+        }
+
+
         #region Helper functions
         private bool isPrimeOrNot(int n)
         {

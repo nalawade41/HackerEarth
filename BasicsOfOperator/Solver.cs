@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Numerics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace HackerEarth
+namespace HackerEarth.BasicsOfOperator
 {
-    class Program
+    class Solver
     {
-        static void Main(string[] args)
+        public void BirthDayParty()
         {
             int n = int.Parse(Console.ReadLine());
             for (int j = 0; j < n; j++)
